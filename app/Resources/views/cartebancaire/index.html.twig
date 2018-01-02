@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Cartebancaires list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Numero</th>
+                <th>Code</th>
+                <th>Solde</th>
+                <th>Iduser</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for cartebancaire in cartebancaires %}
+            <tr>
+                <td><a href="{{ path('cartebancaire_show', { 'id': cartebancaire.numero }) }}">{{ cartebancaire.numero }}</a></td>
+                <td>{{ cartebancaire.code }}</td>
+                <td>{{ cartebancaire.solde }}</td>
+                <td>{{ cartebancaire.idUser }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('cartebancaire_show', { 'id': cartebancaire.numero }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('cartebancaire_edit', { 'id': cartebancaire.numero }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('cartebancaire_new') }}">Create a new cartebancaire</a>
+        </li>
+    </ul>
+{% endblock %}

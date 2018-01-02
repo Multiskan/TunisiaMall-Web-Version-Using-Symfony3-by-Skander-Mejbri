@@ -1,0 +1,26 @@
+sisam_mall_carte:
+    resource: "@SisamMallBundle/Resources/config/routing/carte.yml"
+    prefix:   /carte
+
+sisam_mall_cartebancaire:
+        resource: "@SisamMallBundle/Resources/config/routing/cartebancaire.yml"
+        prefix:   /cartebancaire
+sisam_mall_produit:
+        resource: "@SisamMallBundle/Resources/config/routing/produit.yml"
+        prefix:   /produit
+sisam_mall_panier:
+        resource: "@SisamMallBundle/Resources/config/routing/panier.yml"
+        prefix:   /panier
+sisam_mall_magasin:
+        resource: "@SisamMallBundle/Resources/config/routing/magasin.yml"
+        prefix:   /magasin
+sisam_mall_local:
+        resource: "@SisamMallBundle/Resources/config/routing/local.yml"
+        prefix:   /local
+sisam_mall_ouvrier:
+        resource: "@SisamMallBundle/Resources/config/routing/ouvrier.yml"
+        prefix:   /ouvrier
+sisam_mall_homepage:
+    path:     /
+    defaults: { _controller: SisamMallBundle:Default:index }
+

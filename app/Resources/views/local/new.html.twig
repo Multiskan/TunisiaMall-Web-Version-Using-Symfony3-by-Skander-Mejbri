@@ -1,0 +1,50 @@
+{% extends 'layout1.html.twig' %}
+
+{% block formulaire %}
+    <section class="project_area section-padding">
+        <form  method="post">
+            <div class="row jsSubmit_button">
+                <div class="input-field col-md-6">
+                    <input id="contact_name" type="text" class="validate" name="Surface" required>
+                    <label for="contact_name">
+                        <i class="zmdi zmdi-account"></i>Surface
+                        <span>*</span>
+                    </label>
+                </div>
+                <div class="input-field col-md-6">
+                    <input id="contact_name" type="text" class="validate" name="Prix" required>
+                    <label for="contact_name">
+                        <i class="zmdi zmdi-account"></i>Prix
+                        <span>*</span>
+                    </label>
+                </div>
+
+                <div class="input-field col-md-6">
+                    <input id="contact_name" type="text" class="validate" name="Etat" required>
+                    <label for="contact_name">
+                        <i class="zmdi zmdi-smartphone-setting"></i>Etat
+                        <span>*</span>
+                    </label>
+
+                <div class="input-field col-md-6">
+                    <input id="contact_name" type="text" class="validate" name="idL" required>
+                    <label for="contact_name">
+                        <i class="zmdi zmdi-alarm-check"></i>idL
+                        <span>*</span>
+                    </label>
+                </div>
+
+
+                <div class="col-md-12">
+                    <button type="submit" class="th_bt btn waves-effect" name="submit_btn" value="submit">
+                        Ajouter<i class="zmdi zmdi-file-add"></i>
+                    </button>
+                </div>
+                <div class="col-md-12">
+                    <a href="{{ path('local_index') }}" class="th_bt btn waves-effect">Retour à la liste
+                        <i class="zmdi zmdi-long-arrow-left"></i></a>
+                </div>
+            </div>
+        </form>
+    </section>
+{% endblock %}

@@ -1,0 +1,68 @@
+{% extends 'layout1.html.twig' %}
+
+{% block formulaire %}
+<section class="project_area section-padding">
+    <form  method="post">
+        <div class="row jsSubmit_button">
+            <div class="input-field col-md-6">
+                <input id="contact_name" type="text" class="validate" name="Nom" required>
+                <label for="contact_name">
+                    <i class="zmdi zmdi-account"></i>Nom
+                    <span>*</span>
+                </label>
+            </div>
+            <div class="input-field col-md-6">
+                <input id="contact_name" type="text" class="validate" name="Prenom" required>
+                <label for="contact_name">
+                    <i class="zmdi zmdi-account"></i>Prenom
+                    <span>*</span>
+                </label>
+            </div>
+
+            <div class="input-field col-md-6">
+                <input id="contact_name" type="tel" class="validate" name="Tel" required>
+                <label for="contact_name">
+                    <i class="zmdi zmdi-smartphone-setting"></i>Tel
+                    <span>*</span>
+                </label>
+            </div>
+            <div class="input-field col-md-6">
+                <input id="contact_email" type="email" class="validate" name="Mail" required>
+                <label for="contact_email"><i class="zmdi zmdi-email"></i>Mail
+                    <span>*</span>
+                </label>
+            </div>
+            <div class="input-field col-md-6">
+                <input id="contact_name" type="number" class="validate" name="jours" required>
+                <label for="contact_name">
+                    <i class="zmdi zmdi-alarm-check"></i>jours
+                    <span>*</span>
+                </label>
+            </div>
+            <div class="input-field col-md-6">
+                <input id="contact_name" type="number" class="validate" name="Absence" required>
+                <label for="contact_name">
+                    <i class="zmdi zmdi-alarm-check"></i>Absence
+                    <span>*</span>
+                </label>
+            </div>
+            <div class="input-field col-md-6">
+                <input id="contact_name" type="text" class="validate" name="Poste" required>
+                <label for="contact_name">
+                    <i class="zmdi zmdi-case"></i>Poste
+                    <span>*</span>
+                </label>
+            </div>
+            <div class="col-md-12">
+                <button type="submit" class="th_bt btn waves-effect" name="submit_btn" value="submit">
+                    Ajouter<i class="zmdi zmdi-file-add"></i>
+                </button>
+            </div>
+            <div class="col-md-12">
+                <a href="{{ path('ouvrier_index') }}" class="th_bt btn waves-effect">Retour à la liste
+                    <i class="zmdi zmdi-long-arrow-left"></i></a>
+            </div>
+        </div>
+    </form>
+    </section>
+{% endblock %}

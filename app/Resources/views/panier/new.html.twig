@@ -1,0 +1,17 @@
+{% extends 'layout.html.twig' %}
+{% block formulaire %}
+    <center>
+    <h1>Ajouter Produit au panier</h1>
+
+    {{ form_start(form) }}
+        {{ form_widget(form) }}
+        <input type="submit" value="Create" />
+    {{ form_end(form) }}
+
+    <ul>
+        <li>
+            <a href="{{ path('panier_index') }}">Back</a>
+        </li>
+    </ul>
+</center>
+{% endblock %}

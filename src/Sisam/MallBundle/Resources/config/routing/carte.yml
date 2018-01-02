@@ -1,0 +1,24 @@
+carte_index:
+    path:     /
+    defaults: { _controller: "SisamMallBundle:Carte:index" }
+    methods:  GET
+
+carte_show:
+    path:     /{id}/show
+    defaults: { _controller: "SisamMallBundle:Carte:show" }
+    methods:  GET
+
+carte_new:
+    path:     /new
+    defaults: { _controller: "SisamMallBundle:Carte:new" }
+    methods:  [GET, POST]
+
+carte_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "SisamMallBundle:Carte:edit" }
+    methods:  [GET, POST]
+
+carte_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "SisamMallBundle:Carte:delete" }
+    methods:  DELETE

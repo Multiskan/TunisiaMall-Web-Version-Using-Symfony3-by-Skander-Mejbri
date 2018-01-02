@@ -1,0 +1,35 @@
+{% extends 'layout.html.twig' %}
+
+{% block formulaire %}
+    <center><h1>Produits</h1>
+
+    <table border="1" class="table">
+        <thead>
+            <tr>
+
+                <th bgcolor="#ffa07a">Libelle</th>
+                <th bgcolor="#ffa07a">Marque</th>
+                <th bgcolor="#ffa07a">Prix</th>
+                <th bgcolor="#ffa07a">Details</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for produit in produits %}
+            <tr>
+
+                <td>{{ produit.libelle }}</td>
+                <td>{{ produit.marque }}</td>
+                <td>{{ produit.prix }}</td>
+
+                <td>
+
+                            <a href="{{ path('produit_show', { 'id': produit.id }) }}">show</a>
+
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    </center>
+{% endblock %}

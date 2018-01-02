@@ -1,0 +1,29 @@
+ouvrier_index:
+    path:     /
+    defaults: { _controller: "SisamMallBundle:Ouvrier:index" }
+    methods:  GET
+
+ouvrier_show:
+    path:     /{id}/show
+    defaults: { _controller: "SisamMallBundle:Ouvrier:show" }
+    methods:  GET
+
+ouvrier_new:
+    path:     /new
+    defaults: { _controller: "SisamMallBundle:Ouvrier:new" }
+    methods:  [GET, POST]
+
+ouvrier_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "SisamMallBundle:Ouvrier:edit" }
+    methods:  [GET, POST]
+
+ouvrier_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "SisamMallBundle:Ouvrier:delete" }
+    methods:  DELETE
+
+ouvrier_edit2:
+    path:     /{id}/edit2
+    defaults: { _controller: "SisamMallBundle:Ouvrier:edit2" }
+    methods:  [GET, POST]

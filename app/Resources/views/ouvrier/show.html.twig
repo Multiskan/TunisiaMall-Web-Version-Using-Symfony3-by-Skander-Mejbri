@@ -1,0 +1,76 @@
+{% extends 'layout1.html.twig' %}
+
+{% block formulaire %}
+    <section class="project_area section-padding">
+<div class="promos" align="center">
+    <div class="promo">
+        <div class="promo scale">
+            <div class="deal">
+                <span>Ouvrier</span>
+            </div>
+            <span class="price">Identifiant : {{ ouvrier.id }}</span>
+            <ul class="features">
+                <li>Nom : {{ ouvrier.nom }}</li>
+                <li>Prenom : {{ ouvrier.prenom }}</li>
+                <li>Tel : {{ ouvrier.tel }}</li>
+                <li>Mail : {{ ouvrier.mail }}</li>
+                <li>jours : {{ ouvrier.jours }}</li>
+                <li>Absence : {{ ouvrier.absence }}</li>
+                <li>Poste : {{ ouvrier.poste }}</li>
+            </ul>
+
+        </div>
+    </div>
+</div>
+
+
+
+    <ul>
+        <li>
+
+            <div class="col-md-12" align="right">
+
+
+                    <a href="{{ path('ouvrier_edit2', { 'id': ouvrier.id }) }}" class="th_bt btn waves-effect">payer<i class="zmdi zmdi-long-arrow-left"></i></a>
+
+                <a href="{{ path('ouvrier_index') }}" class="th_bt btn waves-effect"><i class="zmdi zmdi-long-arrow-left"></i></a>
+            </div>
+        </li>
+        <li>
+            <div class="col-md-12">
+            <a href="{{ path('ouvrier_edit', { 'id': ouvrier.id }) }}" class="th_bt btn waves-effect"><i class="zmdi zmdi-edit"></i></a>
+            </div>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+            <div class="col-md-12">
+                <button type="submit" class="th_bt btn waves-effect" name="submit_btn" value="Delete">
+                    Supprimer<i class="zmdi zmdi-tag-backspace"></i>
+                </button>
+            </div>
+            {{ form_end(delete_form) }}
+        </li>
+
+    </ul>
+
+        <section class="project_area section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+                        <div class="single_fact text-center">
+                            <div class="fact_icon">
+                                <div class="RXcircleEffect"></div>
+                                <i class="zmdi zmdi-money"></i>
+                            </div>
+                            <h2><span class="counter">{{ ouvrier.jours }}</span></h2>
+                            <p>Jours</p>
+
+                            </i>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+{% endblock %}

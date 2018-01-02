@@ -1,0 +1,24 @@
+cartebancaire_index:
+    path:     /
+    defaults: { _controller: "SisamMallBundle:Cartebancaire:index" }
+    methods:  GET
+
+cartebancaire_show:
+    path:     /{id}/show
+    defaults: { _controller: "SisamMallBundle:Cartebancaire:show" }
+    methods:  GET
+
+cartebancaire_new:
+    path:     /new
+    defaults: { _controller: "SisamMallBundle:Cartebancaire:new" }
+    methods:  [GET, POST]
+
+cartebancaire_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "SisamMallBundle:Cartebancaire:edit" }
+    methods:  [GET, POST]
+
+cartebancaire_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "SisamMallBundle:Cartebancaire:delete" }
+    methods:  DELETE

@@ -1,0 +1,51 @@
+{% extends 'layout1.html.twig' %}
+
+{% block formulaire %}
+    <section class="project_area section-padding">
+        <div class="promos" align="center">
+            <div class="promo">
+                <div class="promo scale">
+                    <div class="deal">
+                        <span>Ouvrier</span>
+                    </div>
+                    <span class="price">Identifiant : {{ local.id }}</span>
+                    <ul class="features">
+                        <li>Surface : {{ local.surface }}</li>
+                        <li>Prix : {{ local.prixparmois }}</li>
+                        <li>Etat : {{ local.etat }}</li>
+                        <li>idL : {{ local.idOu }}</li>
+
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+
+
+
+        <ul>
+            <li>
+                <div class="col-md-12" align="right">
+                    <a href="{{ path('local_edit2', { 'id': local.id }) }}" class="th_bt btn waves-effect">louer<i class="zmdi zmdi-long-arrow-left"></i></a>
+                    <a href="{{ path('local_index') }}" class="th_bt btn waves-effect">Retour à la liste
+                        <i class="zmdi zmdi-long-arrow-left"></i></a>
+                </div>
+            </li>
+            <li>
+                <div class="col-md-12">
+                    <a href="{{ path('local_edit', { 'id': local.id }) }}" class="th_bt btn waves-effect">Modifier
+                        <i class="zmdi zmdi-edit"></i></a>
+                </div>
+            </li>
+            <li>
+                {{ form_start(delete_form) }}
+                <div class="col-md-12">
+                    <button type="submit" class="th_bt btn waves-effect" name="submit_btn" value="Delete">
+                        Supprimer<i class="zmdi zmdi-tag-backspace"></i>
+                    </button>
+                </div>
+                {{ form_end(delete_form) }}
+            </li>
+        </ul>
+    </section>
+{% endblock %}

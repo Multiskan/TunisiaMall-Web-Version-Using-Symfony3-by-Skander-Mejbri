@@ -1,0 +1,55 @@
+{% extends 'layout1.html.twig' %}
+
+{% block formulaire %}
+    <section class="project_area section-padding">
+
+        <h1 class="checkText" >Liste des locaux</h1>
+
+        <table  class="responsive-table responsive-table-input-matrix">
+            <tr >
+                <th>Identifiant</th>
+                <th>Surface</th>
+                <th>Prix</th>
+                <th>Etat</th>
+                <th>idL</th>
+
+            </tr>
+
+            {% for local in locals %}
+                <tr >
+                    <td data-th="Role" ><a href="{{ path('local_show', { 'id': local.id }) }}">{{ local.id }}</a></td>
+                    <td data-th="Add to Page">{{ local.surface }}</td>
+                    <td data-th="Configure">{{ local.prixParMois}}</td>
+                    <td data-th="View">{{ local.etat }}</td>
+                    <td data-th="Change Permissions">{{ local.idOu }}</td>
+
+
+
+
+                    <td>
+                        <ul>
+                            <li>
+                                <a href="{{ path('local_show', { 'id': local.id }) }}" class="th_bt btn waves-effect">
+                                    <i class="zmdi zmdi-search-in-page"></i></a>
+                            </li>
+                            <li>
+                                <a href="{{ path('local_edit', { 'id': local.id }) }}" class="th_bt btn waves-effect">
+                                    <i class="zmdi zmdi-edit"></i></a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+            {% endfor %}
+
+        </table>
+        <div align="center">
+
+
+
+
+            <a href="{{ path('local_new') }}" class="th_bt btn waves-effect">Ajouter local
+                <i class="zmdi zmdi-collection-add"></i></a>
+        </div>
+
+    </section>
+{% endblock %}

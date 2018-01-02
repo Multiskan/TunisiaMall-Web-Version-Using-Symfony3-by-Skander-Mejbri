@@ -1,0 +1,12 @@
+tunisa_user_homepage:
+    path:     /
+    defaults: { _controller: SisamMallBundle:Produit:index }
+client_homepage:
+    path:     /log
+    defaults: { _controller: FOSUserBundle:Security:login }
+sisam_mall:
+    resource: "@SisamMallBundle/Resources/config/routing.yml"
+    prefix:   /xx
+admin_page:
+    path:     /Admin
+    defaults: { _controller: SisamMallBundle:Ouvrier:index }

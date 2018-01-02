@@ -1,0 +1,59 @@
+{% extends 'layout1.html.twig' %}
+
+{% block formulaire %}
+<section class="project_area section-padding">
+
+    <h1 class="checkText" >Liste des ouvriers</h1>
+
+    <table  class="responsive-table responsive-table-input-matrix">
+        <tr >
+            <th>Identifiant</th>
+            <th>Nom</th>
+            <th>Prenom</th>
+            <th>Tel</th>
+            <th>Mail</th>
+            <th>date</th>
+            <th>Absences</th>
+            <th>Poste</th>
+        </tr>
+
+        {% for ouvrier in ouvriers %}
+            <tr >
+                <td data-th="Role" ><a href="{{ path('ouvrier_show', { 'id': ouvrier.id }) }}">{{ ouvrier.id }}</a></td>
+                <td data-th="Add to Page">{{ ouvrier.nom }}</td>
+                <td data-th="Configure">{{ ouvrier.prenom }}</td>
+                <td data-th="View">{{ ouvrier.tel }}</td>
+                <td data-th="Change Permissions">{{ ouvrier.mail }}</td>
+
+                <td data-th="Role">{{ ouvrier.jours }}</td>
+                <td data-th="Add to Page">{{ ouvrier.absence }}</td>
+                <td data-th="Configure">{{ ouvrier.poste }}</td>
+
+
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('ouvrier_show', { 'id': ouvrier.id }) }}" class="th_bt btn waves-effect">
+                                <i class="zmdi zmdi-search-in-page"></i></a>
+                        </li>
+                        <li>
+                            <a href="{{ path('ouvrier_edit', { 'id': ouvrier.id }) }}" class="th_bt btn waves-effect">
+                                <i class="zmdi zmdi-edit"></i></a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+
+    </table>
+<div align="center">
+
+
+
+
+            <a href="{{ path('ouvrier_new') }}" class="th_bt btn waves-effect">Ajouter ouvrier
+                <i class="zmdi zmdi-collection-add"></i></a>
+    </div>
+
+</section>
+{% endblock %}

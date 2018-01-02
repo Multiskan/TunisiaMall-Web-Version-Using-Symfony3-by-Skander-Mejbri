@@ -1,0 +1,34 @@
+{% extends 'layout.html.twig' %}
+
+{% block formulaire %}
+    <center><h1>Mon Panier</h1></center>
+<center>
+    <table border="1" bgcolor="#ff7f50">
+        <thead>
+            <tr>
+
+                <th bgcolor="#ff7f50"> Nom du Produit</th>
+                <th bgcolor="#ff7f50"> Prix du Produit</th>
+
+            </tr>
+        </thead>
+        <tbody>
+        {% for panier in paniers %}
+            <tr>
+
+
+                <td>{{ panier.nom }}</td>
+                <td>{{ panier.prix }}</td>
+
+
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</center></br>
+
+            <center><a href="{{ path('produit_index') }}">Back to List</a></center> ***
+{% for carte in cartes %}
+            <center><a href="{{ path('panier_achat', { 'id': carte.numero }) }}">Acheter</a></center>
+{% endfor %}
+{% endblock %}

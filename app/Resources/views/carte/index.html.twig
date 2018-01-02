@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Cartes list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Reference</th>
+                <th>Idclient</th>
+                <th>Marque</th>
+                <th>Ptfidelite</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for carte in cartes %}
+            <tr>
+                <td><a href="{{ path('carte_show', { 'id': carte.reference }) }}">{{ carte.reference }}</a></td>
+                <td>{{ carte.idClient }}</td>
+                <td>{{ carte.marque }}</td>
+                <td>{{ carte.ptFidelite }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('carte_show', { 'id': carte.reference }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('carte_edit', { 'id': carte.reference }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('carte_new') }}">Create a new carte</a>
+        </li>
+    </ul>
+{% endblock %}

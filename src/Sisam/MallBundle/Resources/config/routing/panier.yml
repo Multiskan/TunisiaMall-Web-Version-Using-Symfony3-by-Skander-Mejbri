@@ -1,0 +1,34 @@
+panier_index:
+    path:     /
+    defaults: { _controller: "SisamMallBundle:Panier:index" }
+    methods:  GET
+
+panier_show:
+    path:     /{id}/show
+    defaults: { _controller: "SisamMallBundle:Panier:show" }
+    methods:  GET
+
+panier_new:
+    path:     /new
+    defaults: { _controller: "SisamMallBundle:Panier:new" }
+    methods:  [GET, POST]
+
+panier_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "SisamMallBundle:Panier:edit" }
+    methods:  [GET, POST]
+
+panier_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "SisamMallBundle:Panier:delete" }
+    methods:  DELETE
+
+panier_neww:
+    path:     /{id}/neww
+    defaults: { _controller: "SisamMallBundle:Panier:neww" }
+    methods:  [GET, POST]
+
+panier_achat:
+    path:     /{id}/achat
+    defaults: { _controller: "SisamMallBundle:Panier:achat" }
+    methods:  [GET, POST]

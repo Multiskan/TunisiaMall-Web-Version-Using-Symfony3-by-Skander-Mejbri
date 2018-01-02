@@ -1,0 +1,12 @@
+sisam_mail_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: SisamMailBundle:Default:index }
+
+sisam_mail_redirection:
+    path:     /redirection
+    defaults: { _controller: SisamMailBundle:Default:redirection}
+
+sisam_mail_sendmail:
+    path:     /sendMail  
+    defaults: { _controller: SisamMailBundle:Default:sendMail}
+

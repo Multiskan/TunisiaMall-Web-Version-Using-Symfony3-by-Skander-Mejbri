@@ -1,0 +1,14 @@
+sisam_mall:
+    resource: "@SisamMallBundle/Resources/config/routing.yml"
+    prefix:   /xx
+
+tunisa_user:
+    resource: "@TunisaUserBundle/Resources/config/routing.yml"
+    prefix:   /
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
+
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"

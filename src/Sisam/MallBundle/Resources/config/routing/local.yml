@@ -1,0 +1,29 @@
+local_index:
+    path:     /
+    defaults: { _controller: "SisamMallBundle:Local:index" }
+    methods:  GET
+
+local_show:
+    path:     /{id}/show
+    defaults: { _controller: "SisamMallBundle:Local:show" }
+    methods:  GET
+
+local_new:
+    path:     /new
+    defaults: { _controller: "SisamMallBundle:Local:new" }
+    methods:  [GET, POST]
+
+local_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "SisamMallBundle:Local:edit" }
+    methods:  [GET, POST]
+
+local_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "SisamMallBundle:Local:delete" }
+    methods:  DELETE
+
+local_edit2:
+    path:     /{id}/edit2
+    defaults: { _controller: "SisamMallBundle:Local:edit2" }
+    methods:  [GET, POST]

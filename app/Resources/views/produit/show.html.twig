@@ -1,0 +1,32 @@
+{% extends 'layout.html.twig' %}
+{% block formulaire %}<center>
+    <h1>Détails</h1>
+
+    <table  class="table">
+        <tbody>
+
+            <tr bgcolor="#e6e6fa">
+                <th>Libelle</th>
+                <td>{{ produit.libelle }}</td>
+            </tr>
+            <tr bgcolor="#e6e6fa">
+                <th>Marque</th>
+                <td>{{ produit.marque }}</td>
+            </tr>
+            <tr bgcolor="#e6e6fa">
+                <th>Prix</th>
+                <td>{{ produit.prix }}</td>
+            </tr>
+            <tr bgcolor="#e6e6fa">
+                <th>Image</th>
+                <td><img src="{{ produit.image }}" width="58" height="58"></td>
+            </tr>
+        </tbody>
+    </table>
+<center>
+
+            <a href="{{ path('panier_neww', { 'id': produit.id }) }}">Ajouter au Panier</a> ***
+
+            <a href="{{ path('produit_index') }}">Back to the list</a> ***
+    <a href="{{ path('panier_index') }}">Afficher Mon Paniert</a></center>
+    </center>{% endblock %}
